@@ -31,9 +31,12 @@ class Employee:
         self.employees.append(employee_data)
         
     def list_employees(self):
-        print(self.employees)
+        return self.employees
 
     def __str__(self):
+        pass
+
+    def __repr__(self):
         return f'The employee is {self.first_name} {self.last_name} and is identified by {self.employee_no}'
 
 
