@@ -27,14 +27,23 @@ class Employee(object):
     def get_employee_no(self):
         return self.employee_no
 
-    def add_employee(self, employee_data):
-        self.employees.append(employee_data)
-        
+    def add_employee(self, employee):
+        if employee not in self.employees:
+            self.employees.append(employee)
+    
+    def remove_employee(self, employee):
+        if employee in self.employees:
+            self.employees.remove(employee)
+
     def list_employees(self):
-        return self.employees
+        for employee in self.employees:
+            print(employee)
 
     def __str__(self):
-        pass
-
-    def __repr__(self):
         return f'The employee is {self.first_name} {self.last_name} and is identified by {self.employee_no}'
+
+
+"""
+    def __repr__(self):
+        pass
+"""
