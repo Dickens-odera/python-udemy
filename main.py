@@ -1,7 +1,6 @@
 from strings import *
 from login import login
-from Employee import *
-
+from SalariedEmployee import *
 
 # Working with Numbers
 
