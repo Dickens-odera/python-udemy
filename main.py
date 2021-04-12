@@ -27,4 +27,6 @@ if __name__ == '__main__':
     print(employee.list_employees())
 
     salaried_employee = SalariedEmployee('Dickens', 'Odera', 'dickens@test.com', '0718452812', 'EMP4528', 4000)
+    salaried_employee.salary_amount = 5000  # set the salary_amount to some value
+    print(salaried_employee)
     salaried_employee.calculate_net_pay(200)

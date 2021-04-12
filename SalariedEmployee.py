@@ -6,6 +6,8 @@ The salaried employee that inherits from the employee class
 
 class SalariedEmployee(Employee):
     def __init__(self, first_name, last_name, email, phone, employee_no, salary_amount):
+        if not isinstance(salary_amount, (int, float)):
+            raise TypeError('The salary can only be either an integer or a decimal value')
         self.salary_amount = salary_amount
         super().__init__(first_name, last_name, email, phone, employee_no)
 
