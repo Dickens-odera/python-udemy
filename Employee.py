@@ -18,7 +18,9 @@ class Employee:
 
     @phone.setter
     def phone(self, phone):
-        if len(phone) >= 10:
+        if len(phone) < 10:
+            raise ValueError('The phone number must not be less than 10')
+        elif len(phone) > 10:
             raise ValueError('The phone number must not exceed 10 digits')
         self._phone = phone
 
@@ -56,8 +58,6 @@ class SalariedEmployee(Employee):
         self._salary_amount = amount
 
     def calculate_net_pay(self, deductions):
-        if deductions > self.salary_amount:
-            return False
         net_pay = self.salary_amount - deductions
         print(f'Employee with the identity {self.employee_no} earns a net income of {net_pay:.2f}')
 

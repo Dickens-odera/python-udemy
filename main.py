@@ -23,9 +23,9 @@ if __name__ == '__main__':
         'Hello There {first_name} {second_name} {last_name}'.format(first_name='Dickens', second_name='Ochieng',
                                                                     last_name='Ooko')))
 
-    employee = Employee('John', 'Doe', 'john@test.com', '07179489', 'EMP1234')
+    employee = Employee('John', 'Doe', 'john@test.com', '0717948945', 'EMP1234')
     employee.add_employee(employee)
     print(employee.get_employee_no())
 
-    salaried_employee = SalariedEmployee('Dickens', 'Odera', 'dickens@test.com', '07184528', 'EMP4528', 4000)
+    salaried_employee = SalariedEmployee('Dickens', 'Odera', 'dickens@test.com', '0718452812', 'EMP4528', 4000)
     salaried_employee.calculate_net_pay(200)
